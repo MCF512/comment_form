@@ -10,19 +10,23 @@
 </head>
 
 <body>
-  <div class="comment__field">123</div>
+  <div class="comment__field">
+
+  </div>
 
   <form action="#" name="commentForm" class="form">
-    <label for="name">Ваше имя</label>
-    <input type="text" name="name" id="name">
+    <label for="name">Имя</label>
+    <input type="text" name="name" id="name" placeholder="Как Вас зовут?">
+    <div class="error error-1"></div>
 
-    <label for="date">Введите дату</label>
-    <input type="text" name="date" id="date">
+    <label for="date">Дата</label>
+    <input type="text" name="date" id="date" placeholder="Введите дату в формате ДД/ММ/ГГГГ. Например:21/03/2011">
 
     <label for="comment">Комментарий</label>
-    <textarea type="text" name="comment" id="comment"></textarea>
+    <textarea type="text" name="comment" id="comment" placeholder="Что Вам понравилось? Что было не так?"></textarea>
+    <div class="error error-2"></div>
 
-    <button type="submit" id="submit__btn">Подтвердить</button>
+    <button type="submit" id="submitBtn">Подтвердить</button>
   </form>
 
   <script src="js/script.js"></script>

@@ -3,11 +3,43 @@
 }
 
 .comment__field {
+  padding: 5px;
   flex-grow: 1;
-  height: 45vh;
+  height: 50vh;
   overflow-y: scroll;
   max-width: 500px;
   width: 100%;
+  margin-bottom: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(89, 149, 206) transparent;
+}
+
+.comment__field::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
+  width: 5px;
+  height: 100px;
+  border-radius: 5px;
+}
+
+.comment__field::-webkit-scrollbar-track,
+textarea::-webkit-scrollbar-track {
+  /* background: rgb(228, 228, 228); */
+  background: transparent;
+  height: 100px;
+}
+
+.comment__field::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
+  background-color: rgb(89, 149, 206);
+  border-radius: 5px;
+}
+
+textarea::-webkit-scrollbar-track-piece:end {
+  margin-bottom: 10px;
+}
+
+textarea::-webkit-scrollbar-track-piece:start {
+  margin-top: 10px;
 }
 
 body {
@@ -15,6 +47,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 form {
@@ -33,6 +66,7 @@ input {
   border-radius: 15px;
   padding: 10px;
   margin-bottom: 10px;
+  outline-color: rgb(49, 136, 217);
 }
 
 textarea {
@@ -43,6 +77,7 @@ textarea {
   height: 150px;
   resize: none;
   overflow-y: scroll;
+  outline-color: rgb(49, 136, 217);
 }
 
 button[type="submit"] {
@@ -52,4 +87,71 @@ button[type="submit"] {
   background-color: rgb(215, 234, 255);
   border: 1px solid rgb(89, 149, 206);
   margin: 0 auto;
+}
+
+.comment__wrapper {
+  border: 1px solid rgb(89, 149, 206);
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+}
+
+.comment__name {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  flex: 1;
+}
+
+.comment__date {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.comment__text {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.comment__first__row {
+  display: flex;
+  align-items: center;
+}
+
+.comment__favourite {
+  margin-right: 5px;
+}
+
+.comment__favourite,
+.comment__del {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: transparent;
+}
+
+.comment__favourite:hover path,
+.comment__del:hover path {
+  stroke: red;
+}
+
+.comment__favourite--active path {
+  fill: red;
+  stroke: red;
+}
+
+.invalid {
+  border-color: red;
+}
+
+.error {
+  color: red;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.empty__text {
+  text-align: center;
 }
