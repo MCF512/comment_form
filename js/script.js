@@ -45,6 +45,9 @@ form.addEventListener('submit', function (e) {
       localStorage.setItem('comments', JSON.stringify(commentsFromStorage))
       fillCommentField();
     }
+    form.name.value = ''
+    form.comment.value = ''
+    form.date.value = ''
   }
 }
 );
